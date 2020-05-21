@@ -47,7 +47,7 @@ export default {
     })
 
     const pushTodoItem = item => store.commit('PUSH_TODO_ITEM', item)
-    const removeTodoItem = () => store.commit('REMOVE_TODO_ITEM')
+    const removeTodoItem = index => store.commit('REMOVE_TODO_ITEM', index)
     const onSubmit = () => {
       pushTodoItem({
         name: state.todo,
